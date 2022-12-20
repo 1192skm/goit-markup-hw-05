@@ -353,27 +353,31 @@ body {
     align-items: center;
     background-color: var(--bg-color);
     border: 1px solid #8E8F99;
+    
     border-radius: 4px;
-    color: #8E8F99;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .company-item:hover,
 .company-item:focus {
-    border: 1px solid var(--primary-brand);
-    color: var(--primary-brand);
+    border-color: var(--primary-brand);
 }
 .company-item:active {
     border: 1px solid var(--pressed-color);
-    color: var(--pressed-color);
 }
 .company-icon {
     width: 104px;
     height: 56px;
-    fill: currentColor;
+    fill: #8E8F99;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.company-item:hover .company-icon,
+.company-item:focus .company-icon{
+    fill: var(--primary-brand);
+}
+.company-item:active .company-icon{
+    fill: var(--pressed-color);
+}
 
 /* Footer */
 .footer {
@@ -511,7 +515,6 @@ body {
     border: 1px solid transparent;
     min-width: 69px;
     padding: 8px 16px;
-    border: 1px solid #E7E9FC;
     border-radius: 4px;
     
     font-family: 'Roboto';
@@ -527,7 +530,7 @@ body {
     cursor: pointer;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
 }
 .current {
     color: var(--bg-color);
